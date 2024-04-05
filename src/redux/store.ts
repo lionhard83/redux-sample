@@ -1,5 +1,3 @@
-// e il contenitore di tutti gli stati
-
 import { configureStore } from "@reduxjs/toolkit";
 import { counterReducer } from "./counterSlice";
 import { themeReducer } from "./themeSlice";
