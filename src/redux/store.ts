@@ -1,6 +1,6 @@
 // e il contenitore di tutti gli stati
 
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, Reducer } from "@reduxjs/toolkit";
 import { counterReducer } from "./counterSlice";
 import { themeReducer } from "./themeSlice";
 
@@ -13,8 +13,4 @@ export const store = configureStore({
   reducer,
 });
 
-export type Slice = keyof typeof reducer;
-export type State = Record<
-  Slice,
-  { value: ReturnType<(typeof reducer)[Slice]> }
->;
+export type State = ReturnType<typeof store.getState>;
