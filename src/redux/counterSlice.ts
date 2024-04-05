@@ -15,7 +15,7 @@ export const counterSlice = createSlice({
       state.value -= 1;
     },
     set: (state, action: { payload: number }) => {
-      state.value += action.payload;
+      state.value = action.payload;
     },
   },
 });

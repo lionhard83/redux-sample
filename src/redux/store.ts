@@ -1,14 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { counterReducer } from "./counterSlice";
 import { themeReducer } from "./themeSlice";
-
-const reducer = {
-  counter: counterReducer, // contesto
-  theme: themeReducer, // contesto
-};
+import { personReducer } from "./personSlice";
 
 export const store = configureStore({
-  reducer,
+  reducer: {
+    counter: counterReducer, // contesto
+    theme: themeReducer, // contesto
+    person: personReducer, // contesto
+  },
 });
 
 export type State = ReturnType<typeof store.getState>;
