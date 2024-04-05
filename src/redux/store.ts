@@ -1,6 +1,6 @@
 // e il contenitore di tutti gli stati
 
-import { configureStore, Reducer } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { counterReducer } from "./counterSlice";
 import { themeReducer } from "./themeSlice";
 
