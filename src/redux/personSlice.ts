@@ -4,8 +4,8 @@ export const personSlice = createSlice({
   name: "person",
   initialState: {
     value: {
-      name: String(localStorage.getItem("name") || ""),
-      surname: String(localStorage.getItem("surname") || ""),
+      name: localStorage.getItem("name") || "",
+      surname: localStorage.getItem("surname") || "",
     },
   },
   reducers: {
